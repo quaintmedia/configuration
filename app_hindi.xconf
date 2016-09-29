@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+        ServerName happ.liveindia.live
+        ServerAlias liveindia.live
+        ServerAdmin aws.liveindia@gmail.com
+
+        DocumentRoot "/var/www/html/app/hindi"
+
+        <Directory /var/www/html/app/hindi/>
+                AddOutputFilterByType DEFLATE text/json
+                Options +Indexes +FollowSymLinks +MultiViews
+                AllowOverride All
+                Require all granted
+        </Directory>
+</VirtualHost>

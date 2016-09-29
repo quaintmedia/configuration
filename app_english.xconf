@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+        ServerName eapp.liveindia.live
+        ServerAlias liveindia.press
+        ServerAdmin aws.liveindia@gmail.com
+
+        DocumentRoot "/var/www/html/app/english"
+
+        <Directory /var/www/html/app/english/>
+                AddOutputFilterByType DEFLATE text/json
+                Options +Indexes +FollowSymLinks +MultiViews
+                AllowOverride All
+                Require all granted
+        </Directory>
+</VirtualHost>
